@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "description": "Canonical prompt registry for Productivity Prompts.",
+  "resolution": {
+    "case_sensitive": false,
+    "normalize_whitespace": true,
+    "order": ["command", "aliases", "canonical_name", "canonical_path"],
+    "ambiguous_match": "fail",
+    "required_shared_contracts": [
+      "contracts/SOURCE-OF-TRUTH.md",
+      "contracts/PRODUCTIVITY-UX.md",
+      "contracts/PRIORITIZATION.md",
+      "contracts/ACTION-SAFETY.md"
+    ],
+    "shared_contract_precedence": "Shared contracts are authoritative over conflicting workflow-local instructions."
+  },
+  "prompts": {
+    "today.md": {"command":"today","aliases":["today overview","tasks for today","what do I need to do today"],"canonical_path":"daily/today.md"},
+    "plan-day.md": {"command":"plan-day","aliases":["plan day","plan today"],"canonical_path":"daily/plan-day.md"},
+    "open-loops.md": {"command":"open-loops","aliases":["open loops","unfinished work"],"canonical_path":"daily/open-loops.md"},
+    "this-week.md": {"command":"this-week","aliases":["this week","week overview","agenda this week"],"canonical_path":"weekly/this-week.md"},
+    "weekly-review.md": {"command":"weekly-review","aliases":["weekly review","review week"],"canonical_path":"weekly/weekly-review.md"},
+    "task-inbox.md": {"command":"inbox","aliases":["task inbox","productivity inbox"],"canonical_path":"tasks/task-inbox.md"},
+    "prioritize-tasks.md": {"command":"prioritize-tasks","aliases":["prioritize tasks","prioritise tasks"],"canonical_path":"tasks/prioritize-tasks.md"},
+    "agenda-today.md": {"command":"agenda-today","aliases":["agenda today","calendar today"],"canonical_path":"calendar/agenda-today.md"},
+    "agenda-week.md": {"command":"agenda-week","aliases":["agenda week","calendar week"],"canonical_path":"calendar/agenda-week.md"},
+    "prepare-meetings.md": {"command":"prepare-meetings","aliases":["prepare meetings","meeting prep"],"canonical_path":"calendar/prepare-meetings.md"},
+    "inbox-summary.md": {"command":"inbox-summary","aliases":["mail summary","email summary"],"canonical_path":"communication/inbox-summary.md"},
+    "follow-ups.md": {"command":"follow-ups","aliases":["follow ups","pending replies"],"canonical_path":"communication/follow-ups.md"},
+    "github-work.md": {"command":"github-work","aliases":["github work","development work"],"canonical_path":"work/github-work.md"},
+    "development-focus.md": {"command":"development-focus","aliases":["development focus","dev focus"],"canonical_path":"work/development-focus.md"}
+  }
+}
