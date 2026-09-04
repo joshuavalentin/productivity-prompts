@@ -1,73 +1,75 @@
 # Productivity Prompts
 
-A personal productivity prompt system for ChatGPT that combines tasks, calendar, email, GitHub, and conversation context into concise, actionable overviews.
+Een persoonlijk productiviteitspromptsysteem voor ChatGPT dat taken, agenda, e-mail, GitHub en gesprekscontext combineert tot compacte, uitvoerbare overzichten.
 
-## Version
+## Versie
 
-`0.1.0`
+`0.1.1`
 
-## Author
+## Auteur
 
 Joshua Valentin
 
-## License
+## Licentie
 
-Proprietary / no public license. All rights reserved.
+Proprietary / geen openbare licentie. Alle rechten voorbehouden.
 
-## Core principle
+## Kernprincipe
 
-**One overview, not one report per app.**
+**Eén overzicht, niet één rapport per app.**
 
-The source applications remain the source of truth. These prompts orchestrate, interpret, prioritize, and summarize information across connected services.
+De bronapplicaties blijven de bron van waarheid. Deze prompts orkestreren, interpreteren, prioriteren en vatten informatie uit gekoppelde diensten samen.
 
-## Primary commands
+## Primaire commando's
 
-| Command | Purpose |
+| Commando | Doel |
 | --- | --- |
-| `today` | Show what matters today across all available sources. |
-| `this-week` | Show the relevant commitments, deadlines, and focus for the current week. |
-| `plan-day` | Turn today's commitments into a realistic execution order. |
-| `open-loops` | Find unfinished commitments, pending replies, and unresolved work. |
-| `inbox` | Triage actionable items across task, mail, and work inboxes. |
-| `weekly-review` | Review the past week and prepare the next one. |
+| `vandaag` | Toon wat vandaag belangrijk is uit alle beschikbare bronnen. |
+| `deze-week` | Toon relevante verplichtingen, deadlines en focus voor de huidige week. |
+| `dag-plannen` | Zet de verplichtingen van vandaag om in een realistische uitvoervolgorde. |
+| `openstaande-zaken` | Vind onafgeronde verplichtingen, openstaande reacties en onopgelost werk. |
+| `inbox` | Triage van actiegerichte items uit taken, e-mail en werkinboxen. |
+| `weekevaluatie` | Evalueer de afgelopen week en bereid de volgende voor. |
 
-## Initial sources
+De eerdere Engelse commando's blijven als aliases beschikbaar voor achterwaartse compatibiliteit.
 
-- Todoist — tasks and task deadlines
-- Google Calendar — appointments and time commitments
-- Gmail — communication and follow-ups
-- GitHub — development work and issue state
-- ChatGPT context — relevant current-conversation context when available
+## Bronnen
 
-A source may be unavailable in a specific ChatGPT session. Prompts must state missing sources explicitly and continue with the sources that are available.
+- Todoist — taken en taakdeadlines
+- Google Calendar — afspraken en tijdsverplichtingen
+- Gmail — communicatie en opvolging
+- GitHub — ontwikkelwerk en issuestatus
+- ChatGPT-context — relevante context uit het huidige gesprek wanneer beschikbaar
 
-## Structure
+Todoist wordt uitsluitend als databron gebruikt. Taken worden als gewone tekst/Markdown weergegeven, niet als inline Todoist-venster of embedded interface.
 
-- `contracts/` — shared behavior, prioritization, source ownership, and action-safety rules
-- `daily/` — daily overview and planning workflows
-- `weekly/` — weekly overview and review workflows
-- `tasks/` — task triage and prioritization workflows
-- `calendar/` — agenda and meeting workflows
-- `communication/` — inbox and follow-up workflows
-- `work/` — GitHub and development-focus workflows
-- `prompts.json` — canonical command registry and resolver
+## Structuur
 
-## Usage
+- `contracts/` — gedeelde gedrags-, prioriterings-, bron- en veiligheidsregels
+- `daily/` — dagelijkse overzichten en planningsworkflows
+- `weekly/` — weekoverzichten en evaluatieworkflows
+- `tasks/` — taaktriage en prioriteringsworkflows
+- `calendar/` — agenda- en vergaderworkflows
+- `communication/` — inbox- en opvolgingsworkflows
+- `work/` — GitHub- en ontwikkelfocusworkflows
+- `prompts.json` — canoniek commandoregister en resolver
 
-Ask ChatGPT for a command directly, for example:
+## Gebruik
 
-```text
-today
-```
-
-or:
+Vraag ChatGPT direct om een commando, bijvoorbeeld:
 
 ```text
-open-loops
+vandaag
 ```
 
-The prompt should load the shared contracts, query the available connected sources that are relevant to the command, deduplicate overlapping information, and return one compact overview.
+of:
 
-## Mutation policy
+```text
+openstaande-zaken
+```
 
-Version `0.1.0` is analysis-first. Read and summarize freely. Never modify Todoist, Gmail, Calendar, GitHub, or another connected service unless the user explicitly requests the change and the mutation is supported safely.
+De prompt laadt de gedeelde contracten, bevraagt de beschikbare gekoppelde bronnen die relevant zijn, voegt overlappende informatie samen en geeft één compact overzicht terug.
+
+## Wijzigingsbeleid
+
+Versie `0.1.1` is analysis-first. Lezen en samenvatten mag vrij. Wijzig Todoist, Gmail, Calendar, GitHub of een andere gekoppelde dienst nooit zonder expliciete opdracht van de gebruiker en alleen wanneer de wijziging veilig wordt ondersteund.

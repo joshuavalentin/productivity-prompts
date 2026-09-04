@@ -1,56 +1,64 @@
 # Productivity UX
 
-## Core principle
+## Kernprincipe
 
-**One overview, not one report per app.**
+**Eén overzicht, niet één rapport per app.**
 
-## Default response behavior
+## Standaardgedrag van antwoorden
 
-1. Synthesize before presenting. Do not dump raw source data.
-2. Keep the default answer concise, scannable, and decision-oriented.
-3. Prefer clear sections such as `Must`, `Next`, `Agenda`, `Waiting`, and `Attention` only when they contain useful items.
-4. Show exact dates and times where they affect action or sequencing.
-5. Put the most important next action near the top.
-6. Limit recommendations to a realistic number of active priorities.
-7. Distinguish commitments from ideas, backlog, and optional work.
-8. Surface conflicts, overdue work, deadlines, dependencies, and unanswered follow-ups.
-9. Do not manufacture urgency from unread messages, old ideas, or low-priority backlog.
-10. Avoid repeating the same item under multiple sections.
+1. Synthetiseer vóór presentatie. Dump geen ruwe brongegevens.
+2. Houd het standaardantwoord compact, scanbaar en beslissingsgericht.
+3. Gebruik duidelijke secties zoals `Moet`, `Daarna`, `Agenda`, `Wachten` en `Aandacht` alleen wanneer ze nuttige items bevatten.
+4. Toon exacte datums en tijden wanneer die actie of volgorde beïnvloeden.
+5. Zet de belangrijkste volgende actie dicht bij de bovenkant.
+6. Beperk aanbevelingen tot een realistisch aantal actieve prioriteiten.
+7. Maak onderscheid tussen verplichtingen, ideeën, backlog en optioneel werk.
+8. Breng conflicten, achterstallig werk, deadlines, afhankelijkheden en onbeantwoorde opvolging naar voren.
+9. Creëer geen kunstmatige urgentie uit ongelezen berichten, oude ideeën of backlog met lage prioriteit.
+10. Herhaal hetzelfde item niet in meerdere secties.
 
-## Default compact format
+## Todoist-weergave
 
-Use a structure similar to:
+- Gebruik Todoist uitsluitend als databron voor taken, deadlines, prioriteiten en relevante taakmetadata.
+- Haal de relevante taken op en presenteer ze als gewone tekst of Markdown binnen het samengestelde antwoord.
+- Toon of open geen inline Todoist-interface, embedded venster, iframe-achtige weergave, widget of appweergave als vervanging voor het tekstuele resultaat.
+- Geef geen ruwe Todoist-dump; vat taken samen en plaats ze onder de relevante prioriteits- of planningssectie.
+- Noem Todoist als bron alleen wanneer herkomst inhoudelijk relevant is.
+
+## Standaard compact formaat
+
+Gebruik bijvoorbeeld:
 
 ```text
-# Today
+# Vandaag
 
-## Must
+## Moet
 1. ...
 2. ...
 
-## Next
+## Daarna
 - ...
 
 ## Agenda
 - 10:30–12:30 — ...
 
-## Attention
+## Aandacht
 - ...
 
 ## Focus
-One concise recommendation.
+Eén beknopte aanbeveling.
 ```
 
-Omit empty sections. Adapt section names to the workflow instead of forcing the template.
+Laat lege secties weg. Pas sectienamen aan de workflow aan in plaats van het sjabloon te forceren.
 
-## Source visibility
+## Zichtbaarheid van bronnen
 
-Do not produce separate Todoist, Gmail, Calendar, and GitHub reports unless the user explicitly asks for source-by-source detail. Mention a source inline only when provenance matters.
+Maak niet afzonderlijk een Todoist-, Gmail-, Calendar- en GitHub-rapport tenzij de gebruiker expliciet om details per bron vraagt. Noem een bron inline alleen wanneer herkomst relevant is.
 
-## Missing data
+## Ontbrekende gegevens
 
-If one or more relevant integrations are unavailable, add one short note at the end such as:
+Als één of meer relevante integraties niet beschikbaar zijn, voeg dan één korte opmerking toe, bijvoorbeeld:
 
-`Missing source: Todoist was unavailable, so task coverage may be incomplete.`
+`Ontbrekende bron: Todoist was niet beschikbaar, waardoor het takenoverzicht onvolledig kan zijn.`
 
-Do not let availability notes dominate the answer.
+Laat beschikbaarheidsmeldingen het antwoord niet domineren.

@@ -1,15 +1,22 @@
 # Changelog
 
-All notable changes to Productivity Prompts are documented here.
+Alle noemenswaardige wijzigingen aan Productivity Prompts worden hier vastgelegd.
+
+## [0.1.1] - 2026-09-04
+
+### Gewijzigd
+
+- Alle canonieke gebruikersprompts en commando's naar het Nederlands vertaald.
+- Bestaande Engelse commando's als aliases behouden voor achterwaartse compatibiliteit.
+- Gebruikersgerichte outputlabels en documentatie naar het Nederlands vertaald.
+- Vastgelegd dat Todoist uitsluitend als databron wordt gebruikt en taken als gewone tekst/Markdown worden weergegeven, zonder inline of embedded Todoist-interface.
 
 ## [0.1.0] - 2026-09-04
 
-### Added
+### Toegevoegd
 
-- Initial standalone repository foundation.
-- Canonical prompt resolver in `prompts.json`.
-- Shared contracts for source ownership, productivity UX, prioritization, and action safety.
-- Daily workflows for `today`, `plan-day`, and `open-loops`.
-- Weekly workflows for `this-week` and `weekly-review`.
-- Task, calendar, communication, and GitHub-focused supporting workflows.
-- Analysis-first integration model for Todoist, Google Calendar, Gmail, GitHub, and ChatGPT context.
+- Initiële zelfstandige repositorybasis.
+- Canonieke promptresolver in `prompts.json`.
+- Gedeelde contracten voor bronbeheer, productivity UX, prioritering en actieveiligheid.
+- Dagelijkse, wekelijkse, taak-, agenda-, communicatie- en GitHub-workflows.
+- Analysis-first integratiemodel voor Todoist, Google Calendar, Gmail, GitHub en ChatGPT-context.

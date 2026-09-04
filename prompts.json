@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "description": "Canonical prompt registry for Productivity Prompts.",
+  "description": "Canoniek promptregister voor Productivity Prompts.",
   "resolution": {
     "case_sensitive": false,
     "normalize_whitespace": true,
@@ -12,22 +12,22 @@
       "contracts/PRIORITIZATION.md",
       "contracts/ACTION-SAFETY.md"
     ],
-    "shared_contract_precedence": "Shared contracts are authoritative over conflicting workflow-local instructions."
+    "shared_contract_precedence": "Gedeelde contracten zijn leidend boven conflicterende workflow-lokale instructies."
   },
   "prompts": {
-    "today.md": {"command":"today","aliases":["today overview","tasks for today","what do I need to do today"],"canonical_path":"daily/today.md"},
-    "plan-day.md": {"command":"plan-day","aliases":["plan day","plan today"],"canonical_path":"daily/plan-day.md"},
-    "open-loops.md": {"command":"open-loops","aliases":["open loops","unfinished work"],"canonical_path":"daily/open-loops.md"},
-    "this-week.md": {"command":"this-week","aliases":["this week","week overview","agenda this week"],"canonical_path":"weekly/this-week.md"},
-    "weekly-review.md": {"command":"weekly-review","aliases":["weekly review","review week"],"canonical_path":"weekly/weekly-review.md"},
-    "task-inbox.md": {"command":"inbox","aliases":["task inbox","productivity inbox"],"canonical_path":"tasks/task-inbox.md"},
-    "prioritize-tasks.md": {"command":"prioritize-tasks","aliases":["prioritize tasks","prioritise tasks"],"canonical_path":"tasks/prioritize-tasks.md"},
-    "agenda-today.md": {"command":"agenda-today","aliases":["agenda today","calendar today"],"canonical_path":"calendar/agenda-today.md"},
-    "agenda-week.md": {"command":"agenda-week","aliases":["agenda week","calendar week"],"canonical_path":"calendar/agenda-week.md"},
-    "prepare-meetings.md": {"command":"prepare-meetings","aliases":["prepare meetings","meeting prep"],"canonical_path":"calendar/prepare-meetings.md"},
-    "inbox-summary.md": {"command":"inbox-summary","aliases":["mail summary","email summary"],"canonical_path":"communication/inbox-summary.md"},
-    "follow-ups.md": {"command":"follow-ups","aliases":["follow ups","pending replies"],"canonical_path":"communication/follow-ups.md"},
-    "github-work.md": {"command":"github-work","aliases":["github work","development work"],"canonical_path":"work/github-work.md"},
-    "development-focus.md": {"command":"development-focus","aliases":["development focus","dev focus"],"canonical_path":"work/development-focus.md"}
+    "vandaag.md": {"command":"vandaag","aliases":["today","today overview","tasks for today","wat moet ik vandaag doen"],"canonical_path":"daily/vandaag.md"},
+    "dag-plannen.md": {"command":"dag-plannen","aliases":["plan-day","plan day","plan today","dag plannen"],"canonical_path":"daily/dag-plannen.md"},
+    "openstaande-zaken.md": {"command":"openstaande-zaken","aliases":["open-loops","open loops","unfinished work","openstaande zaken"],"canonical_path":"daily/openstaande-zaken.md"},
+    "deze-week.md": {"command":"deze-week","aliases":["this-week","this week","week overview","deze week"],"canonical_path":"weekly/deze-week.md"},
+    "weekevaluatie.md": {"command":"weekevaluatie","aliases":["weekly-review","weekly review","review week","week evaluatie"],"canonical_path":"weekly/weekevaluatie.md"},
+    "taken-inbox.md": {"command":"inbox","aliases":["task inbox","productivity inbox","taken inbox"],"canonical_path":"tasks/taken-inbox.md"},
+    "taken-prioriteren.md": {"command":"taken-prioriteren","aliases":["prioritize-tasks","prioritize tasks","prioritise tasks","taken prioriteren"],"canonical_path":"tasks/taken-prioriteren.md"},
+    "agenda-vandaag.md": {"command":"agenda-vandaag","aliases":["agenda-today","agenda today","calendar today","agenda vandaag"],"canonical_path":"calendar/agenda-vandaag.md"},
+    "weekagenda.md": {"command":"weekagenda","aliases":["agenda-week","agenda week","calendar week","week agenda"],"canonical_path":"calendar/weekagenda.md"},
+    "vergaderingen-voorbereiden.md": {"command":"vergaderingen-voorbereiden","aliases":["prepare-meetings","prepare meetings","meeting prep","vergaderingen voorbereiden"],"canonical_path":"calendar/vergaderingen-voorbereiden.md"},
+    "inbox-overzicht.md": {"command":"inbox-overzicht","aliases":["inbox-summary","mail summary","email summary","inbox overzicht"],"canonical_path":"communication/inbox-overzicht.md"},
+    "opvolging.md": {"command":"opvolging","aliases":["follow-ups","follow ups","pending replies"],"canonical_path":"communication/opvolging.md"},
+    "github-werk.md": {"command":"github-werk","aliases":["github-work","github work","development work","github werk"],"canonical_path":"work/github-werk.md"},
+    "ontwikkelfocus.md": {"command":"ontwikkelfocus","aliases":["development-focus","development focus","dev focus"],"canonical_path":"work/ontwikkelfocus.md"}
   }
 }

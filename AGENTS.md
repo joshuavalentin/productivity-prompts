@@ -2,46 +2,47 @@
 
 ## Project
 
-Productivity Prompts is a standalone prompt repository for orchestrating personal productivity data across connected services.
+Productivity Prompts is een zelfstandige promptrepository voor het orkestreren van persoonlijke productiviteitsdata uit gekoppelde diensten.
 
-## Version
+## Versie
 
-Current foundation: `0.1.0`.
+Huidige basis: `0.1.1`.
 
-## Repository principles
+## Repositoryprincipes
 
-1. Keep prompts small, composable, and source-aware.
-2. Prefer one combined answer over app-by-app reports.
-3. Treat source applications as authoritative for their own data.
-4. Never invent unavailable task, mail, calendar, or GitHub data.
-5. State source availability or uncertainty when it materially affects the result.
-6. Deduplicate the same commitment when it appears in multiple sources.
-7. Separate read/analysis behavior from mutations.
-8. Do not modify external systems without explicit user intent.
-9. Keep repository-facing content in English unless explicitly requested otherwise.
-10. Preserve backward-compatible commands through `prompts.json` when renaming workflows.
+1. Houd prompts klein, combineerbaar en bronbewust.
+2. Geef voorkeur aan één gecombineerd antwoord boven rapporten per app.
+3. Behandel bronapplicaties als leidend voor hun eigen gegevens.
+4. Verzin nooit niet-beschikbare taak-, e-mail-, kalender- of GitHub-data.
+5. Benoem bronbeschikbaarheid of onzekerheid wanneer die het resultaat materieel beïnvloedt.
+6. Voeg dezelfde verplichting samen wanneer die in meerdere bronnen voorkomt.
+7. Scheid lees-/analysegedrag van wijzigingen.
+8. Wijzig externe systemen niet zonder expliciete intentie van de gebruiker.
+9. Houd gebruikersgerichte prompts, commando's en documentatie standaard in het Nederlands.
+10. Behoud achterwaartse compatibiliteit via `prompts.json` wanneer workflows worden hernoemd.
+11. Gebruik Todoist als databron en presenteer opgehaalde taken als tekst/Markdown; gebruik geen embedded of inline Todoist-interface als uitvoer.
 
-## Prompt design
+## Promptontwerp
 
-Every canonical workflow must:
+Iedere canonieke workflow moet:
 
-- resolve through `prompts.json`;
-- load all required shared contracts;
-- query only sources relevant to its objective;
-- synthesize across sources before presenting output;
-- prioritize actionable information over completeness;
-- keep default output concise and scannable;
-- identify blockers, deadlines, waiting states, and schedule conflicts when relevant;
-- avoid turning low-value ideas or backlog items into urgent work.
+- via `prompts.json` worden opgelost;
+- alle vereiste gedeelde contracten laden;
+- alleen bronnen opvragen die relevant zijn voor het doel;
+- informatie eerst tussen bronnen synthetiseren en daarna presenteren;
+- actiegerichte informatie boven volledigheid prioriteren;
+- de standaarduitvoer compact en scanbaar houden;
+- blokkades, deadlines, wachtstatussen en planningsconflicten benoemen wanneer relevant;
+- voorkomen dat ideeën met lage waarde of backlog als urgent werk worden gepresenteerd.
 
-## Connected services
+## Gekoppelde diensten
 
-Initial target sources are Todoist, Google Calendar, Gmail, GitHub, and relevant ChatGPT conversation context. Additional sources may be added later through shared contracts and resolver metadata.
+De initiële bronnen zijn Todoist, Google Calendar, Gmail, GitHub en relevante ChatGPT-gesprekscontext. Later kunnen aanvullende bronnen via gedeelde contracten en resolvermetadata worden toegevoegd.
 
-## Safety and privacy
+## Veiligheid en privacy
 
-Personal productivity data may contain private or sensitive information. Retrieve the minimum relevant data, avoid unnecessary reproduction of message contents, and prefer summaries over raw dumps. Mutations must follow `contracts/ACTION-SAFETY.md`.
+Persoonlijke productiviteitsdata kan privé- of gevoelige informatie bevatten. Haal alleen de minimaal relevante gegevens op, reproduceer berichtinhoud niet onnodig en geef voorkeur aan samenvattingen boven ruwe dumps. Wijzigingen moeten `contracts/ACTION-SAFETY.md` volgen.
 
-## Versioning
+## Versiebeheer
 
-Use semantic versioning. Update `CHANGELOG.md` when behavior or command contracts change materially.
+Gebruik semantic versioning. Werk `CHANGELOG.md` bij wanneer gedrag of commandocontracten materieel veranderen.
